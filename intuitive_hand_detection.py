@@ -100,7 +100,6 @@ while video_capture.isOpened():
 
     # MediaPipeで扱う画像は、OpenCVのBGRの並びではなくRGBのため変換
     rgb_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
     # 画像をリードオンリーにしてHands検出処理実施
     rgb_image.flags.writeable = False
     hands_results = hands.process(rgb_image)
